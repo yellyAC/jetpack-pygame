@@ -1,5 +1,5 @@
 import pygame, random
-from pygame import image
+
 
 # Initialize pygame
 pygame.init()
@@ -56,13 +56,28 @@ enemy_y = random.randint(0, 500)
 enemy_x_change = 0
 enemy_y_change = 0
 
+
+#Setting up scores
+score_value = 0
+font = pygame.font.Font('freesansbold.ttf', 32)
+textX = 10
+textY = 10
+
+def show_score(x, y):
+    global score_value
+    score = font.render("Score : " + str(score_value), True, (0, 0, 0))
+    screen.blit(score, (x, y))
+
+
 def enemy_respawn():
     global enemy_x
     global enemy_y
     enemy_x = random.randint(800, 1000)
     enemy_y = random.randint(0, 500)
-
+    
+    
 def enemy (x, y):
+    global score_value
     screen.blit(enemy_image,(x, y))
 
     # bullets
@@ -81,11 +96,13 @@ def enemy (x, y):
                     temp_bullet_y <= enemy_y + enemy_image.get_height():
             bullets.remove(bullet)
             enemy_respawn()
-
+            score_value += 1
+            
     for bullet in bullets:
         if bullet[0] < 0:
             bullets.remove(bullet)
-
+            
+            
 
 
 #GAME LOOP
@@ -110,20 +127,22 @@ while game_loop:
 
     if girlgun_x <= 0:
         girlgun_x = 0
-    elif girlgun_x >= background.get_width():
-        girlgun_x = background.get_width() 
+    elif girlgun_x >= 670:
+        girlgun_x = 670 
 
     if girlgun_y <= 0:
         girlgun_y = 0
-    elif girlgun_y >= background.get_height():
-        girlgun_y = background.get_height()
+    elif girlgun_y >= 600:
+        girlgun_y = 600
 
 #ENEMIES
     enemy(enemy_x, enemy_y)
-   
+     
+#SHOW SCORE
+    show_score(textX, textY)
 
-# Controls for girlgun
-    movement_speed = 5
+#Controls for girlgun
+    movement_speed = 7
     keys = pygame.key.get_pressed()
     if keys[pygame.K_UP]:
         girlgun_y = girlgun_y - movement_speed
@@ -138,6 +157,7 @@ while game_loop:
         if now - last_bullet_time >= bullet_delay_ms:
             last_bullet_time = now
             bullets.append([girlgun_x + girlgun.get_width(), girlgun_y + girlgun.get_height() / 2 - bullet_image.get_height() / 2 + 7])
+            
     
     for event in pygame.event.get():
         # User presses QUIT-button.
