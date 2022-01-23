@@ -1,6 +1,5 @@
 import pygame, random
 
-
 # Initialize pygame
 pygame.init()
 
@@ -11,7 +10,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 #Title and Icon
 pygame.display.set_caption("JETPACK REMASTERED")
-icon = pygame.image.load('peachy.png')
+icon = pygame.image.load('icon.png')
 pygame.display.set_icon(icon)
 
 # Set for background
@@ -68,13 +67,11 @@ def show_score(x, y):
     score = font.render("Score : " + str(score_value), True, (0, 0, 0))
     screen.blit(score, (x, y))
 
-
 def enemy_respawn():
     global enemy_x
     global enemy_y
     enemy_x = random.randint(800, 1000)
     enemy_y = random.randint(0, 500)
-    
     
 def enemy (x, y):
     global score_value
@@ -103,17 +100,15 @@ def enemy (x, y):
             bullets.remove(bullet)
             
             
-
-
 #GAME LOOP
 while game_loop:
     clock.tick(fps)
 
-# Animate
+#Animate
     bg_x_1 = bg_x_1 - speed
     bg_x_2 = bg_x_2 - speed
 
-# Reset position kapag yung x ay lagpas
+#Reset position kapag yung x ay lagpas
     if bg_x_1 < background.get_width() * -1:
         bg_x_1 = background.get_width()
     if bg_x_2 < background.get_width() * -1:
@@ -138,10 +133,10 @@ while game_loop:
 #ENEMIES
     enemy(enemy_x, enemy_y)
      
-#SHOW SCORE
+#PRINT SCORE
     show_score(textX, textY)
 
-#Controls for girlgun
+#PLAYER CONTROLS
     movement_speed = 7
     keys = pygame.key.get_pressed()
     if keys[pygame.K_UP]:
