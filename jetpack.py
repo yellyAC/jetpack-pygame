@@ -9,7 +9,7 @@ SCREEN_HEIGHT = 720
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 #Title and Icon
-pygame.display.set_caption("JETPACK REMASTERED")
+pygame.display.set_caption("JETPACK DRIVE")
 icon = pygame.image.load('icon.png')
 pygame.display.set_icon(icon)
 
@@ -59,8 +59,8 @@ enemy_y_change = 0
 #Setting up scores
 score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
-textX = 10
-textY = 10
+textX = 0
+textY = 0
 
 def show_score(x, y):
     global score_value
