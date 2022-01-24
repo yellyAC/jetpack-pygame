@@ -1,9 +1,9 @@
 ### INTRODUCTION
-`Jetpack Drive` Game is a Pygame computer program that is a cross-platform set of Python modeles designed for
+`Jetpack` Game is a Pygame computer program that is a cross-platform set of Python modeles designed for
 writing video games. It is bullet-powered character that shoots bullet towards the enemy.
 
 ### PREREQUISITES
-- Download and Install the latest `Python 3.10` version
+- Download and Install the latest `Python 3.10.1` version
 - Install `Pygame 1.9.6`
 - Clone the repository by either calling git clone https://github.com/yellyAC/jetpack-pygame.git 
   in the terminal OR clicking the clone repository button above.
@@ -13,12 +13,12 @@ writing video games. It is bullet-powered character that shoots bullet towards t
 - `pygame==1.9.6`
 
 ### FOLDER AND FILE STRUCTURE
-- enemy.png - picture of the enemy
-- forest.jpg - background
-- girlgun.png - picture of the player
-- greenbullet.png - picture of the bullet
-- jetpack.py - contains the main operations
-- icon.png - icon
+- jetpack.py - contains the main code
+- enemy.png - enemy image
+- forest.jpg - background image
+- girlgun.png - player image
+- greenbullet.png - bullet image
+- icon.png - icon image
 
 ### HOW TO RUN
 - Run the main file `jetpack.py`
