@@ -1,6 +1,6 @@
 import pygame, random
 
-#Initialize pygame
+#Initialize Pygame
 pygame.init()
 
 #Intialize screen
