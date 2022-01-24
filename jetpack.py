@@ -1,9 +1,9 @@
 import pygame, random
 
-# Initialize pygame
+#Initialize pygame
 pygame.init()
 
-# Intialize screen
+#Intialize screen
 SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -13,21 +13,21 @@ pygame.display.set_caption("JETPACK DRIVE")
 icon = pygame.image.load('icon.png')
 pygame.display.set_icon(icon)
 
-# Set for background
+#Set for background
 background = pygame.image.load('forest.jpg')
 background = pygame.transform.scale(background, (SCREEN_WIDTH, SCREEN_HEIGHT))
 back_rect = background.get_rect()
 
-# Draw background
+#Draw background
 bg_x_1 = 0
 bg_x_2 = background.get_width()
 bg_y = 0
 
-# Manage fps
+#Manage fps
 clock = pygame.time.Clock()
 fps = 60
 
-# Speed of background
+#Speed of background
 speed = 2.5
 game_loop = True
 
@@ -74,7 +74,7 @@ def enemy (x, y):
     global score_value
     screen.blit(enemy_image,(x, y))
 
-    # bullets
+    #BULLETS
     for bullet in bullets:
         screen.blit(bullet_image, pygame.Rect(bullet[0], bullet[1], bullet_image.get_width(), bullet_image.get_height()))
 
@@ -100,7 +100,7 @@ def enemy (x, y):
 while game_loop:
     clock.tick(fps)
 
-#Animate
+#ANIMATE
     bg_x_1 = bg_x_1 - speed
     bg_x_2 = bg_x_2 - speed
 
@@ -113,7 +113,7 @@ while game_loop:
     screen.blit(background, (bg_x_2, bg_y))
     screen.blit(girlgun, (girlgun_x, girlgun_y))
 
-#girldun screen Boundery
+#GIRLGUN SCREEN BOUNDERY
     print("girlgun: {}, {}".format(girlgun_x, girlgun_y))
 
     if girlgun_x <= 0:
