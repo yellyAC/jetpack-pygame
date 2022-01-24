@@ -1,12 +1,12 @@
 ===Jetpack Game===
 We're welcoming you to the game where the character is bullet-powered to fight the enemy's spaceship.
 
-INTRODUCTION
+# INTRODUCTION
 Jetpack Game is a Pygame computer program that is a cross-platform set of Python modeles designed for
 writing video games. It includes computer graphics and sound libraries designed to
 be used with the Python programming language.
 
-PREREQUISITES
+# PREREQUISITES
 - Download and Install the latest Python version
 - Install Pygame
 - Clone the repository by either calling git clone https://github.com/yellyAC/jetpack-pygame.git 
@@ -14,14 +14,11 @@ PREREQUISITES
 - Setup a virtual environment using virtualenv package (https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/26/python-virtual-env/)
 - Activate virtual environment and install required dependencies.
 
-DEPENDENCIES
+# DEPENDENCIES
 
-CONFIGURATION
+# CONFIGURATION
 
-FOLDER AND FILE STRUCTURE
-space_impact 	- disregard
-trex 		- disregard
-vector 		- disregard
+# FOLDER AND FILE STRUCTURE
 enemy.png	- picture of the enemy
 forest.jpg	- background
 girlgun.png	- picture of the player
@@ -30,15 +27,15 @@ jetpack.py	- contains the main operations
 icon.png	- icon
 
 
-HOW TO RUN
-Run the jetpack in the terminal " jetpack.py "
+# HOW TO RUN
+Run the main file 'jetpack.py'
 
 
-ABOUT THE DEVELOPER
+# ABOUT THE DEVELOPER
 This game was developed by Ian Breva and Adrian Panganiban, programmer and constant student of Computer Science.
 
 
-Game Controls: 
+# Game Controls: 
 Arrow Keys = Character Movements
 Spacebar = Bullet
 
