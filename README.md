@@ -23,7 +23,7 @@ writing video games. It is bullet-powered character that shoots bullet towards t
 ### HOW TO RUN
 - Run the main file `jetpack.py`
 
-### Game Controls: 
+### GAME CONTROLS 
 - Arrow Keys = Character Movements
 - Spacebar = Bullet
 
