@@ -9,7 +9,7 @@ SCREEN_HEIGHT = 720
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 #Title and Icon
-pygame.display.set_caption("JETPACK DRIVE")
+pygame.display.set_caption("JETPACK")
 icon = pygame.image.load('icon.png')
 pygame.display.set_icon(icon)
 
