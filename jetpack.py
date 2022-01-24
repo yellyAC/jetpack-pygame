@@ -23,15 +23,6 @@ bg_x_1 = 0
 bg_x_2 = background.get_width()
 bg_y = 0
 
-# Setting up the girlgun
-girlgun = pygame.image.load('girlgun.png')
-girlgun = pygame.transform.scale(girlgun, (girlgun.get_width() * 0.5, girlgun.get_height() * 0.5))
-girlgun_x = 100
-girlgun_y = SCREEN_HEIGHT / 2.5
-girlgun_x_change = 0
-print(girlgun.get_width())
-print(girlgun.get_height())
-
 # Manage fps
 clock = pygame.time.Clock()
 fps = 60
@@ -39,6 +30,15 @@ fps = 60
 # Speed of background
 speed = 2.5
 game_loop = True
+
+#Setting up the girlgun
+girlgun = pygame.image.load('girlgun.png')
+girlgun = pygame.transform.scale(girlgun, (girlgun.get_width() * 0.5, girlgun.get_height() * 0.5))
+girlgun_x = 100
+girlgun_y = SCREEN_HEIGHT / 2.5
+girlgun_x_change = 0
+print(girlgun.get_width())
+print(girlgun.get_height())
 
 #Setting up bullets
 bullets = []
@@ -52,15 +52,12 @@ enemy_image = pygame.image.load('enemy.png')
 enemy_image = pygame.transform.scale(enemy_image, (enemy_image.get_width() * 0.25, enemy_image.get_height() * 0.25))
 enemy_x = random.randint(800, 1000)
 enemy_y = random.randint(0, 500)
-enemy_x_change = 0
-enemy_y_change = 0
-
 
 #Setting up scores
 score_value = 0
 font = pygame.font.Font('freesansbold.ttf', 32)
-textX = 0
-textY = 0
+textX = 20
+textY = 20
 
 def show_score(x, y):
     global score_value
@@ -94,12 +91,11 @@ def enemy (x, y):
             bullets.remove(bullet)
             enemy_respawn()
             score_value += 1
-            
+              
     for bullet in bullets:
         if bullet[0] < 0:
             bullets.remove(bullet)
-            
-            
+
 #GAME LOOP
 while game_loop:
     clock.tick(fps)
@@ -152,8 +148,7 @@ while game_loop:
         if now - last_bullet_time >= bullet_delay_ms:
             last_bullet_time = now
             bullets.append([girlgun_x + girlgun.get_width(), girlgun_y + girlgun.get_height() / 2 - bullet_image.get_height() / 2 + 7])
-            
-    
+
     for event in pygame.event.get():
         # User presses QUIT-button.
         if event.type == pygame.QUIT:
