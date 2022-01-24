@@ -1,7 +1,4 @@
-'Jetpack Game'
-We're welcoming you to the game where the character is bullet-powered to fight the enemy's spaceship.
-
-# INTRODUCTION
+### INTRODUCTION
 Jetpack Game is a Pygame computer program that is a cross-platform set of Python modeles designed for
 writing video games. It includes computer graphics and sound libraries designed to
 be used with the Python programming language.
