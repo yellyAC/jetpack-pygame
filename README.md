@@ -23,9 +23,9 @@ writing video games. It is bullet-powered character that shoots bullet towards t
 ### HOW TO RUN
 - Run the main file `jetpack.py`
 
-### ABOUT THE DEVELOPER
-- This game was developed by Ian Breva and Adrian Panganiban, programmer and constant student of Colegio de San Juan de Letran Calamba.
-
 ### Game Controls: 
 - Arrow Keys = Character Movements
 - Spacebar = Bullet
+
+### ABOUT THE DEVELOPER
+- This game was developed by Ian Breva and Adrian Panganiban, programmer and constant student of Colegio de San Juan de Letran Calamba.
